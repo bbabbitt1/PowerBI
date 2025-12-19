@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barry Babbitt | Power BI Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="brand">
+      <div class="logo">BB</div>
+      <span>Barry Babbitt | Power BI Portfolio</span>
+    </div>
+    <nav class="nav">
+      <a href="#intro">About</a>
+      <a href="#reports">Reports</a>
+      <a href="https://www.linkedin.com/in/barrybabbitt1/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <!-- Container -->
+  <div class="container">
+    
+    <!-- Intro Section -->
+    <section id="intro" class="card" style="margin-bottom: 32px;">
+      <div style="max-width: 800px;">
+        <h1 style="font-size: 2rem; color: var(--color-primary-dark); margin-bottom: 16px;">
+          Hello! I'm <span class="accent">Barry</span>, and welcome to my Power BI Portfolio.
+        </h1>
+        
+        <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 14px;">
+          While I've branched out into other areas of data, Power BI will always be a passion of mine. I've always loved how Power BI development provides the perfect balance of coding, problem-solving, and creativity—especially when it comes to building intuitive, engaging user experiences.
+        </p>
+        
+        <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text-dark); margin-bottom: 14px;">
+          Although I can't share some of my favorite professional work, the reports below use NFL and fictitious financial data to showcase my Power BI skill set, design approach, and storytelling style.
+        </p>
+        
+        <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text-dark);">
+          If you have any questions or want to connect, feel free to reach out on 
+          <a href="https://www.linkedin.com/in/barrybabbitt1/" target="_blank" style="color: var(--color-accent-blue); font-weight: 700; text-decoration: none;">LinkedIn</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Reports Section -->
+    <section id="reports">
+      <h2 style="font-size: 1.8rem; color: var(--color-primary-dark); margin-bottom: 28px; border-bottom: 3px solid var(--color-accent-blue); padding-bottom: 12px;">
+        Reports
+      </h2>
+
+      <!-- Report 1: Financial Scatter Plot -->
+      <article class="card" style="margin-bottom: 32px;">
+        <h3 class="title" style="font-size: 1.3rem;">Financial Scatter Plot</h3>
+        <div class="chart-card" style="margin-bottom: 16px;">
+          <iframe title="Financial Scatter Plot" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiODZlMTkxM2ItMzIyZS00M2U5LWExMjEtYmJhMzllZTdhODc2IiwidCI6ImQ4MjJiODRiLTgwZjYtNDljNS04ZGNjLTU0OWU4MjRkMGRkYyIsImMiOjJ9" frameborder="0" allowFullScreen="true" style="border-radius: 8px;"></iframe>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 14px; background: rgba(217, 255, 246, 0.15); border-radius: 8px; border-left: 4px solid var(--color-accent-blue);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Summary:</strong> This report was built to quickly understand how revenue and net income relate to each other across locations, and to identify where performance is truly strong versus where revenue is not translating into profitability. Rather than looking at revenue or net income in isolation, the goal was to evaluate both together and highlight outliers that deserve attention. The scatter plot acts as the core of the analysis, allowing users to see which locations are driving healthy profit at scale, which are underperforming relative to revenue, and which sit above or below expected net income thresholds. From there, the report provides supporting detail to answer the natural follow-up questions: How much revenue is being generated above the line? Who is responsible for that performance? And which locations are pulling results down? This approach helps shift the conversation from static ranking tables to a more meaningful performance discussion—one that separates volume from efficiency and focuses attention on the areas that matter most.
+            </p>
+          </div>
+          <div style="padding: 14px; background: rgba(79, 163, 209, 0.08); border-radius: 8px; border-left: 4px solid var(--color-primary-dark);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Technical Focus:</strong> The core of this report is the scatter plot and the parameterization behind it. I used dynamic X and Y parameters to control how sites are evaluated, then leveraged DAX to conditionally classify and format each site into performance quadrants. A lot of the fun in this build came from using DAX not just for calculations, but to drive behavior and visual logic throughout the report.
+DAX is also used to conditionally format visual titles and labels so that context updates automatically as users interact with the report. Button-style slicers are used extensively to keep interactions intuitive while minimizing clutter and traditional dropdowns.
+To support exploration, I built a slicer that dynamically surfaces the sites within each quadrant based on the selected X and Y metrics and the quadrant the user wants to focus on. This allows users to move seamlessly from high-level patterns in the scatter plot to a targeted list of locations driving those results.
+Finally, the director-level bar chart provides a clean performance breakdown with subtle color scaling to distinguish top and bottom performers, reinforcing the story without pulling attention away from the main analysis.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Report 2: TopNBottomN -->
+      <article class="card" style="margin-bottom: 32px;">
+        <h3 class="title" style="font-size: 1.3rem;">Top N / Bottom N Analysis</h3>
+        <div class="chart-card" style="margin-bottom: 16px;">
+          <iframe title="TopNBottomN" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiOGZhNGI5NTctOTdhZC00OGE2LTgxODUtYTYyOTA2ZmU4YTEzIiwidCI6ImQ4MjJiODRiLTgwZjYtNDljNS04ZGNjLTU0OWU4MjRkMGRkYyIsImMiOjJ9" frameborder="0" allowFullScreen="true" style="border-radius: 8px;"></iframe>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 14px; background: rgba(217, 255, 246, 0.15); border-radius: 8px; border-left: 4px solid var(--color-accent-blue);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Summary:</strong> This report features one of my favorite types of analysis: top and bottom N performers. I find this technique especially useful for laying the foundation of understanding just how much better your top performers are—or, conversely, how much impact a small group of underperformers can have on overall results.
+Top N / Bottom N analysis is a staple in my analytics toolkit because it naturally leads to the right follow-up questions. Once you identify who is driving performance, the focus shifts from what happened to why it happened. What are these locations, people, or products doing differently that puts them in this position?
+This approach is particularly effective when addressing questions like: “We missed the budget by 10% this month… but are the bottom three performers responsible for 90% of that variance?” By quantifying concentration of impact, the report helps prioritize where attention and action should be focused.
+            </p>
+          </div>
+          <div style="padding: 14px; background: rgba(79, 163, 209, 0.08); border-radius: 8px; border-left: 4px solid var(--color-primary-dark);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Technical Focus:</strong> From a technical standpoint, this report centers on multi-parameter measures that allow users to dynamically slice performance by metric. Disconnected tables are used as filter controls, enabling flexible interaction without introducing unnecessary complexity into the data model.
+
+The primary visual is a matrix built around a Top N + Others pattern, which I rely on frequently to surface meaningful contributors while preserving total context. This approach makes it easy to focus on key performers while still understanding how the remainder of the portfolio impacts overall results. I’m a big fan of clean matrix visuals, supported by thoughtful conditional formatting and clearly presented variances.
+To reinforce the narrative, I incorporated dynamic DAX-driven text that surfaces the key takeaway directly in the report. Statements such as “The Top N accounted for X (Y%) of total variance to the selected metric” update automatically based on user selections, helping guide interpretation without requiring additional explanation.
+Under the hood, the report relies heavily on DAX patterns using SWITCH, SELECTEDVALUE, and carefully designed disconnected tables. These techniques allow the visuals and insights to respond cohesively to user input while keeping the overall experience intuitive and performant.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Report 3: Correlation Analysis -->
+      <article class="card" style="margin-bottom: 32px;">
+        <h3 class="title" style="font-size: 1.3rem;">Correlation Analysis</h3>
+        <div class="chart-card" style="margin-bottom: 16px;">
+          <iframe title="correlation analysis" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiMTkwNzA2MWEtYjJjMC00NDlmLWFhZTctOTNiNzg3OTE1Yzg0IiwidCI6ImQ4MjJiODRiLTgwZjYtNDljNS04ZGNjLTU0OWU4MjRkMGRkYyIsImMiOjJ9" frameborder="0" allowFullScreen="true" style="border-radius: 8px;"></iframe>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 14px; background: rgba(217, 255, 246, 0.15); border-radius: 8px; border-left: 4px solid var(--color-accent-blue);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Summary:</strong> This report focuses on correlation analysis as a way to better understand how different operational and financial metrics move together. Rather than evaluating metrics in isolation, the goal is to identify relationships that may help explain performance and highlight areas worth deeper investigation.
+
+By allowing users to dynamically select the X and Y metrics, the analysis makes it easy to explore how factors like employee satisfaction, retention, revenue, profit, and other operational drivers relate to one another across locations. The scatter plot provides a clear visual of both the strength and direction of each relationship, while the correlation value and trend line help quantify what’s happening beneath the surface.
+
+This type of analysis is especially useful for challenging assumptions. Strong correlations can reinforce where focus may be justified, while weak or unexpected relationships can signal that external factors are at play or that common narratives don’t fully explain the results. The intent is not to imply causation, but to surface meaningful relationships that can guide more targeted follow-up analysis and better-informed decision-making.
+          </p>
+        </div>
+          <div style="padding: 14px; background: rgba(79, 163, 209, 0.08); border-radius: 8px; border-left: 4px solid var(--color-primary-dark);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Technical Focus:</strong>From a technical perspective, this report is driven by dynamic parameterization and measure-based analysis rather than fixed metrics. Both the X-axis and Y-axis are controlled through disconnected tables, allowing users to select any combination of operational or financial metrics without altering the underlying model. This keeps the data model clean while enabling flexible, ad-hoc exploration.
+
+DAX is used to dynamically evaluate the selected metrics, calculate correlation values, and update supporting labels and annotations in real time. Functions such as SELECTEDVALUE and SWITCH are central to this approach, allowing a single set of measures to adapt based on user input instead of maintaining separate measures for each metric combination.
+
+The scatter plot serves as the primary analytical surface, with a dynamically calculated trend line and correlation value that reflect the current selections. Supporting tables provide transparency into the underlying data points, making it easy to move from visual pattern recognition to detailed inspection by location.
+
+Overall, the focus was on building an exploratory experience that feels intuitive while still being technically robust—leveraging disconnected tables, reusable DAX patterns, and dynamic measures to encourage curiosity without overwhelming the user. </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Report 4: Trend Analysis -->
+      <article class="card" style="margin-bottom: 32px;">
+        <h3 class="title" style="font-size: 1.3rem;">Trend Analysis</h3>
+        <div class="chart-card" style="margin-bottom: 16px;">
+          <iframe title="TrendAnalysis" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiZTU4ZTM0OWMtMDQzMS00OTQwLTgyOTYtMGIwMmQzZjc3ZmYwIiwidCI6ImQ4MjJiODRiLTgwZjYtNDljNS04ZGNjLTU0OWU4MjRkMGRkYyIsImMiOjJ9" frameborder="0" allowFullScreen="true" style="border-radius: 8px;"></iframe>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 14px; background: rgba(217, 255, 246, 0.15); border-radius: 8px; border-left: 4px solid var(--color-accent-blue);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Summary:</strong> This report was designed to make short-term performance trends easy to understand and easy to compare. Instead of relying on fixed calendar views, it focuses on rolling time windows so users can quickly answer questions like “How are we performing right now?” and “Is this better or worse than the recent past?”
+
+By allowing users to toggle between different date ranges, the report highlights how performance changes over time and provides immediate context by comparing each period to the one before it. This helps separate normal day-to-day fluctuation from meaningful movement that may require attention.
+
+The supporting views extend this analysis beyond the top-line trend, showing how directors and individual locations contribute to the overall result. Whether identifying teams that are building momentum or isolating underperforming areas, the report is intended to support quick check-ins, focused follow-ups, and more informed short-term decision-making.</p>
+          </div>
+          <div style="padding: 14px; background: rgba(79, 163, 209, 0.08); border-radius: 8px; border-left: 4px solid var(--color-primary-dark);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Technical Focus:</strong> This report is built around dynamic date slicing to compare short-term performance trends against a relevant prior period. Rather than relying on fixed calendar filters, I used disconnected tables and parameter-driven logic to allow users to toggle between rolling time windows (Last 7, 14, 30, and 90 days) while keeping comparisons consistent and intuitive.
+
+DAX plays a central role in calculating current-period versus prior-period metrics, including rolling revenue totals, percentage change, and directional indicators. These calculations update automatically based on the selected time window, allowing the same visuals to scale from near-term trend monitoring to broader performance review without duplicating measures.
+
+The primary bar chart is designed to clearly contrast prior and current periods using consistent color logic, making changes easy to spot at a glance. Supporting visuals extend the analysis by applying the same time-slicing logic to director- and store-level performance, reinforcing how short-term trends roll up across different levels of the organization.
+
+Button-style slicers are used throughout to keep interactions fast and intentional, minimizing dropdowns and reducing friction for the user. Conditional formatting and dynamic labels help surface the key takeaway for each view, ensuring the report communicates what changed and by how much without requiring additional explanation.
+
+Overall, the focus was on building a flexible, reusable trend analysis pattern—one that combines clean visuals, thoughtful UX, and DAX-driven time intelligence to support quick, repeatable performance checks.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Report 5: Dual Measure Highlight (NFL) -->
+      <article class="card" style="margin-bottom: 32px;">
+        <h3 class="title" style="font-size: 1.3rem;">Dual Measure Highlight - NFL</h3>
+        <div class="chart-card" style="margin-bottom: 16px;">
+          <iframe title="DualMeasureHightlight_NFL" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiYjdhNmRmZmMtZTUzOC00Nzg0LTk3MjUtMjdhMzc1NGNkYzJmIiwidCI6ImQ4MjJiODRiLTgwZjYtNDljNS04ZGNjLTU0OWU4MjRkMGRkYyIsImMiOjJ9" frameborder="0" allowFullScreen="true" style="border-radius: 8px;"></iframe>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 14px; background: rgba(217, 255, 246, 0.15); border-radius: 8px; border-left: 4px solid var(--color-accent-blue);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Summary:</strong> This report explores how different offensive metrics relate to team success by looking at cumulative wins for top-ranked teams and how those relationships evolve over time. The goal is to move beyond single-season snapshots and better understand which aspects of performance consistently show up among winning teams.
+
+The summary view highlights which offensive categories are most strongly associated with wins across top teams, helping frame the discussion around what tends to matter most. From there, the line chart provides a season-by-season view, allowing users to compare trends between two selected metrics and see how their relationship changes over time.
+
+This combination makes it easier to spot patterns that persist, identify shifts in how the game is played, and challenge assumptions about which metrics truly drive success.</p>
+          </div>
+          <div style="padding: 14px; background: rgba(79, 163, 209, 0.08); border-radius: 8px; border-left: 4px solid var(--color-primary-dark);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Technical Focus:</strong> From a technical standpoint, this report relies heavily on dynamic metric selection and custom visual behavior. Disconnected tables are used to allow users to select offensive metrics without overcomplicating the underlying model, while DAX measures dynamically respond to those selections across both the summary and trend visuals.
+
+One of the more interesting challenges in this build was the line chart. Power BI doesn’t natively support conditionally highlighting individual lines based on user selection, so I implemented a workaround using layered measures and conditional formatting logic. This approach allows the selected metrics to stand out visually while de-emphasizing the remaining lines, creating a clearer comparison without losing historical context.
+
+Additional DAX patterns, including SWITCH and SELECTEDVALUE, are used to keep the visuals, labels, and legends aligned with user input. The result is an interactive experience that feels intentional and responsive, even when working around platform limitations.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Report 6: C Level Financial Rollup -->
+      <article class="card" style="margin-bottom: 32px;">
+        <h3 class="title" style="font-size: 1.3rem;">Year End Financial Summary</h3>
+        <div class="chart-card" style="margin-bottom: 16px;">
+          <iframe title="C Level Financial Rollup" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiNzIyMGJlZjctMGE2OS00NzIwLWI1MDAtNTU1NmZiYTc1Mjk4IiwidCI6ImQ4MjJiODRiLTgwZjYtNDljNS04ZGNjLTU0OWU4MjRkMGRkYyIsImMiOjJ9" frameborder="0" allowFullScreen="true" style="border-radius: 8px;"></iframe>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div style="padding: 14px; background: rgba(217, 255, 246, 0.15); border-radius: 8px; border-left: 4px solid var(--color-accent-blue);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Summary:</strong>These year-end summary views were designed to provide a clean, high-level snapshot of budget performance while still allowing users to quickly narrow in on what’s driving the result. The goal is to answer the core question first — did we beat the budget or not? — and then immediately show who contributed most to that outcome.
+
+By allowing users to toggle between revenue and profit, switch between top and bottom performers, and choose how variance is evaluated, the report supports multiple perspectives without requiring separate pages or redundant visuals. This makes it easy to move from an executive-level summary to a more focused performance discussion in just a few clicks.
+
+The intent is to keep the experience simple and decisive: highlight overall variance, show how concentrated performance is, and surface the locations that matter most to the story.</p>
+          </div>
+          <div style="padding: 14px; background: rgba(79, 163, 209, 0.08); border-radius: 8px; border-left: 4px solid var(--color-primary-dark);">
+            <p class="small" style="color: var(--color-text-dark); margin: 0;">
+              <strong>Technical Focus:</strong> From a technical perspective, this report leans heavily on parameter-driven logic and reusable DAX patterns to keep the experience flexible without overcomplicating the model. Disconnected tables control performer type, rank selection, variance type, and metric context — allowing a single set of visuals to adapt dynamically based on user input.
+
+DAX measures use SWITCH and SELECTEDVALUE not just for calculations, but to drive visual behavior and labeling throughout the page. This makes it possible to reuse the same donut and bar visuals across multiple analytical perspectives while keeping the experience clean and consistent./p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <p>© 2025 Barry Babbitt. All rights reserved.</p>
+      <a href="https://www.linkedin.com/in/barrybabbitt1/" target="_blank" style="color: var(--color-accent-blue); font-weight: 700; text-decoration: none;">
+        Connect on LinkedIn →
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>
